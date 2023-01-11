@@ -14,6 +14,10 @@ const DB = "mongodb+srv://thekusangi007:thekusangi007@cluster0.ktvtukt.mongodb.n
 app.use(express.json());
 app.use(authRouter);
 
+
+app.get('/food',(req,res)=>{
+  res.send("Here is some food");
+});
 //connections
 mongoose.connect(DB).then(()=>{
     console.log("connection succesful");
